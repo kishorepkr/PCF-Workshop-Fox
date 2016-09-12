@@ -2,15 +2,15 @@
 
 == Account set up and Pre-work
 
-. If you do not have an account yet, please log into Apps Manager with MyID
+. You should already have an account.  Ben or Rob will provide you the default password.  If your login doesn't work, contact Ben/Rob.
 
-. Navigate in a web browser to https://apps.system.pivotalpoc.hosts.disney.pvt
+. Navigate in a web browser to https://apps.system.pcf.foxinc.com
 
-. Click the MyID link and log-in using SSO.
+. Log in using your account credentials
 +
 image:login.png[]
 
-. The interface will show you do not have ORG permission. 
+. You should see the apps manager dashboard.
 +
 image:appsmanager.png[]
 
