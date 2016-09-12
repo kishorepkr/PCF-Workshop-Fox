@@ -1,0 +1,7 @@
+---
+applications:
+- name: ruby
+  memory: 128M
+  instances: 1
+  host: ruby-${random-word}
+  path: .

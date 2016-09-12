@@ -1,0 +1,13 @@
+---
+applications:
+- name: docker-app
+  host: docker-app-${random-word}
+  memory: 512M
+  instances: 1
+  env:
+    APP_KEY: 7NNCsd345efklm5ylqXI045t
+    APP_SECRET: 567vthn72whdgrt4grjf7icbdns37e8sknDRGvfkr
+    OAUTH_TOKEN: ejdnch657thedkcnjNDR685IOOjdnfrnKD78
+    OAUTH_TOKEN_SECRET: R6F884TEep0f3k
+    INCLUDE_TWITTER_HASH:  "#bigdata"
+    MAX_CHART_SIZE: 5000

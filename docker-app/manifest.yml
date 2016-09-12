@@ -1,0 +1,15 @@
+---
+applications:
+- name: twitter-sentiment
+  host: twitter-sentiment
+  memory: 512M
+  instances: 1
+  buildpack: python_buildpack
+  env:
+    APP_KEY: Lw12fhIuzuxOAthth6Qsrth3dfgthrglOGieCaasdgqYE3U
+    APP_SECRET: FJDj5G8dsgFnjLiQViobcbkuykuSbBPjtdKvCdedwxU93JmOnIprtoeAimVLUXmyiM
+    OAUTH_TOKEN: 292771xdc2067uj42-kxy3bhlokFTsefl2Kktzefsef8zPyRvVmScasbusdfsdfa3Qyqgq7gGW
+    OAUTH_TOKEN_SECRET: JFE1l55awdafKcSHghjuik3VQEq567yhbfA8dI8sdgnjkmoPlUl0USrKpC3oIeP3L0Ra
+    INCLUDE_TWITTER_HASH: bigdata
+    MAX_CHART_SIZE: 5000
+

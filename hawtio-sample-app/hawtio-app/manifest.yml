@@ -1,0 +1,9 @@
+applications:
+- name: hawt-server
+  memory: 512M
+  instances: 1
+  host: hawt-spring-client
+  host: hawt-spring-demo
+  path: ./hawtio-app-1.4.65.jar
+  env:
+      JAVA_OPTS: -Djava.security.egd=file:///dev/urandom -Dhawtio.proxyDisableCertificateValidation=true

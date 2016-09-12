@@ -1,0 +1,10 @@
+---
+applications:
+ - name: sso-app-demo
+   host: sso-demo-${random-word}
+   memory: 512M
+   instances: 1
+   path: build/libs/spring-sso-sample-app.jar
+   env:
+     SKIP_SSL_VALIDATION: "true"
+     GRANT_TYPE: authorization_code

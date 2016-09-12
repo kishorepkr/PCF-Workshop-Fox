@@ -1,0 +1,74 @@
+= PCF & Docker -- Twitter Sentiment
+
+== Description
+
+This application analyzes and streams sentiment from a Twitter hash tag. Its aim is to show the same exact code, and repository content can be used to push an app into cloud foundry, as well as build a Docker container, thereby showing that the Docker container is a redundant step which takes time for building updated versions of the app image.
+
+== Project SetUp
+
+To build you own Docker image from this demo it is recommended to create a DockerHub registry account, and create an automated build from a forked version of this repo.
+
+. Obtain Twitter Application keys from https://apps.twitter.com
+. Fork this repo to your own GitHub account
+. Create a link:https://hub.docker.com[DockerHub] registry account
+. Create an automated build of your forked repo: https://docs.docker.com/docker-hub/builds/
+
+== Execution
+
+Run this repo either as a standalone PCF app, or as a Docker image pushed to PCF.
+
+=== Cloud Foundry
+
+. Open the manifest file in a text editor, modify the parameters and environment variables for your deployment
++
+[source, bash]
+---------------------------------------------------------------------
+---
+applications:
+- name: twitter-sentiment
+  host: twitter-sentiment
+  memory: 512M
+  instances: 1
+  buildpack: python_buildpack
+  env:
+    APP_KEY: LwInchdbrgzrfxOAerglOt5GieCgqsdsfdYE3U
+    APP_SECRET: FJDjergerg5G8FergergLQViobcbergergSbBPdKvCwxU93JmOnIprtoeAimVLUXmyiM
+    OAUTH_TOKEN: 292erge771e-kxy3bhFTergergl2Kktyzu8ukzyikPScaesrfbuayqgq7gGW
+    OAUTH_TOKEN_SECRET: JFEaeFGGDeSHg3VQcccdI8Pfj7ghvnj67dh
+    INCLUDE_TWITTER_HASH: bigdata
+    MAX_CHART_SIZE: 5000
+---------------------------------------------------------------------
+
+. Push the code into PCF using the updated manifest
++ 
+$ cf push -f manifest.yml 
+
+=== Push a Docker Image to Cloud Foundry 
+The Docker file contains dummy environment variables which need to be set before running the app in PCF.
+
+. Open the Dockerfile, note the dummy environment variables (do not change)
+. Push the app into PCF using your own account and image name
++
+$ 
+$ cf push -f docker-manifest.yml -o bbertka/ltc-twitter-sentiment-demo
+
+. Update the *docker-manifest.yml* with your own values for the following environment variables
++
+$ cf set-env APP_NAME ENV_VAR_NAME ENV_VAR_VALUE
++
+[source, bash]
+---------------------------------------------------------------------
+ENV APP_KEY  LwInchdbrgzrfxOAerglOt5GieCgqsdsfdYE3U
+ENV APP_SECRET FJDjergerg5G8FergergLQViobcbergergSbBPdKvCwxU93JmOnIprtoeAimVLUXmyiM
+ENV OAUTH_TOKEN 292erge771e-kxy3bhFTergergl2Kktyzu8ukzyikPScaesrfbuayqgq7gGW
+ENV OAUTH_TOKEN_SECRET JFEaeFGGDeSHg3VQcccdI8Pfj7ghvnj67dh
+ENV MAX_CHART_SIZE 5000
+ENV INCLUDE_TWITTER_HASH "#bigdata"
+---------------------------------------------------------------------
+
+. Restage the docker based app to pull in the environment changes
++ 
+$ cf restage APP_NAME
+
+*Congratulations!* You have pushed a container agnostic app into PCF without having to modify the code for both cloud native PCF and Docker based image deployment.
+

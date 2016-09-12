@@ -1,0 +1,9 @@
+applications:
+- name: hawt-spring-client
+  memory: 512M
+  instances: 1
+  host: hawt-spring-client-${random-word}
+  path: ./target/hawt-spring-client-0.0.1-SNAPSHOT.jar
+  env:
+      JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  services: [eureka-service]
