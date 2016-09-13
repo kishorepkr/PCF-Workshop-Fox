@@ -7,7 +7,7 @@
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf login -a https://api.system.pivotalpoc.hosts.disney.pvt -sso --skip-ssl-validation
+$ cf login -a https://api.system.pcf.foxinc.com --skip-ssl-validation
 ----
 +
 Follow the prompts
@@ -31,7 +31,7 @@ You should see output similar to the following listing. Take a look at the listi
 +
 ====
 ----
-Using manifest file /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/manifest.yml <1>
+Using manifest file /Users/phopper/workspace/Workshop-101/cf-spring-mvc-boot/manifest.yml <1>
 
 Creating app workshop in org TELCO / space hopper as phopper@pivotal.io...
 OK <2>
@@ -43,7 +43,7 @@ Binding workshop-philologic-catchpolery.vert.fe.gopivotal.com to workshop...
 OK <4>
 
 Uploading workshop... <5>
-Uploading app files from: /Users/phopper/workspace/NBCU-PCF-Workshop-101/cf-spring-mvc-boot/target/cf-spring-mvc-boot-0.0.1-SNAPSHOT.jar
+Uploading app files from: /Users/phopper/workspace/PCF-Workshop-101/cf-spring-mvc-boot/target/cf-spring-mvc-boot-0.0.1-SNAPSHOT.jar
 Uploading 10.6M, 153 files
 Done uploading               
 OK

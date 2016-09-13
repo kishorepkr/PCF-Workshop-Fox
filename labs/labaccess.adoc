@@ -2,7 +2,7 @@
 
 == Account set up and Pre-work
 
-. You should be able to log in with your foxinc email.  Ben or Rob will provide you the default password.  If your login doesn't work, contact Ben/Rob.
+. You should be able to log in with your foxinc email.  Ben or Rob will provide you the default password.  If your login doesn't work, contact Ben or Rob.  bbertka@pivotal.io rhardt@pivotal.io.
 
 . Navigate in a web browser to https://apps.system.pcf.foxinc.com
 
@@ -26,7 +26,7 @@ $ cf login -a api.system.pcf.foxinc.com --skip-ssl-validation
 ----
 
 
-. Enter the default password or whatever you may have changed it to.
+. Enter the default password or whatever you may have changed yours to.
 
 == Apps Manager UI
 
