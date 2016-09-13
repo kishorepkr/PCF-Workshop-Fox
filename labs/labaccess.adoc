@@ -14,9 +14,6 @@ image:login.png[]
 +
 image:appsmanager.png[]
 
-. Wait a few moments and refresh, click the Org name in the upper left corner of the interface
-. If you still dont see your Org after login, send an email to the instructor: bbertka@pivotal.io
-. In your email, request access to your developer space and be sure to include your BU (ABC, Parks, Studios, etc)
 
 == Target the Environment
 
@@ -25,20 +22,19 @@ image:appsmanager.png[]
 . Set the API target for the CLI: (set appropriate end point for your environment)
 +
 ----
-$ cf login -a api.system.pivotalpoc.hosts.disney.pvt -sso --skip-ssl-validation
+$ cf login -a api.system.pcf.foxinc.com --skip-ssl-validation
 ----
 
-. You will be promoted for a one time passcode from a URL; enter it at the prompt
 
-. Follow the prompts
+. Enter the default password or whatever you may have changed it to.
 
 == Apps Manager UI
 
 . An alternative to installing the CF CLI is via your PCF Apps Manager interface.
 
-. Navigate in a web browser to https://apps.system.pivotalpoc.hosts.disney.pvt
+. Navigate in a web browser to https://apps.system.pcf.foxinc.com
 
-. Login to the interface with MyID
+. Login to the interface with your email/password
 
 . Click the 'Tools' link, and download the CLI matching your operating system
 
