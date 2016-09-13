@@ -2,7 +2,7 @@
 
 == Account set up and Pre-work
 
-. You should already have an account.  Ben or Rob will provide you the default password.  If your login doesn't work, contact Ben/Rob.
+. You should be able to log in with your foxinc email.  Ben or Rob will provide you the default password.  If your login doesn't work, contact Ben/Rob.
 
 . Navigate in a web browser to https://apps.system.pcf.foxinc.com
 
