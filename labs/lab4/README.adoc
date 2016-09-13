@@ -21,7 +21,7 @@ _PCF Metrics provides the following data on app health and performance_
 *To get started, browse to the Metrics URL:*
 
 ----
-https://metrics.system.pivotalpoc.hosts.disney.pvt
+https://metrics.system.pcf.foxinc.com
 ----
 
 image:metrics.png[]

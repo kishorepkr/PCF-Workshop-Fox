@@ -12,7 +12,7 @@ https://github.com/cloudfoundry-samples/spring-music.git
 
 . Edit the manifest.yml at the root of the forked spring-music repository. Change the *host* from ${random-word} to your initials. Jenkins does not like the special characters in the host field and will give an error.
   
-. Login to your Jenkins instance at https://jenkins-0.system.pivotalpoc.hosts.disney.pvt with MyID link
+. Login to your Jenkins instance at https://jenkins-0.system.pcf.yourcompany.io with your PCF email/password.
 
 
 == Create the Build Job
@@ -54,7 +54,7 @@ echo "Deployed Version: $DEPLOYED_VERSION"
 echo "Route Version: $ROUTE_VERSION"
 
 # Save your api target in variable API
-export API=https://api.system.pivotalpoc.hosts.disney.pvt 
+export API=https://api.system.pcf.foxinc.com
 
 # Set current target api to API
 cf api --skip-ssl-validation $API

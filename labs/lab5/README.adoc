@@ -54,7 +54,7 @@ echo "Deployed Version: $DEPLOYED_VERSION"
 echo "Route Version: $ROUTE_VERSION"
 
 # Save your api target in variable API
-export API=https://api.system.pivotalpoc.hosts.disney.pvt 
+export API=https://api.system.pcf.foxinc.com
 
 # Set current target api to API
 cf api --skip-ssl-validation $API
